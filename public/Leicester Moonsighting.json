@@ -1,0 +1,77 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.2237636, 52.6963498, 0]
+      },
+      "properties": { "name": "Old John Tower", "description": "Bradgate Park" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-1.24772, 52.72846, 0] },
+      "properties": {
+        "name": "Beacon Hill, Leicestershire",
+        "description": "Beacon Hill Country Park"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.2488721, 52.5656001, 0]
+      },
+      "properties": { "name": "Croft Hill" }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-1.074298, 52.662891, 0] },
+      "properties": { "name": "Hamilton" }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.07245964568234, 52.6627731803396, 0]
+      },
+      "properties": { "name": "Hamilton" }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.3206114, 52.7144707, 0]
+      },
+      "properties": { "name": "Bardon Hill Quarry" }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0828292, 52.657914, 0]
+      },
+      "properties": {
+        "name": "Porsche Garage",
+        "description": "Hamilton Porsche/Aldi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.0912036, 52.6214907, 0]
+      },
+      "properties": { "name": "Evington Lane" }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.11793914530396, 52.6362696019525, 0]
+      },
+      "properties": { "name": "Beal Street" }
+    }
+  ]
+}

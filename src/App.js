@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Home from "./Home";
+import NotFound from "./NotFound";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LocationDetails from "./LocationDetails";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          {/* defines where page content should go & only one route shows at one time */}
+          <Switch>
+            {/* route for each page */}
+            <Route exact path="/">
+              {/* nest home component */}
+              <Home />
+            </Route>
+            {/* <Route path="/create">
+              <Create />
+            </Route> */}
+            <Route path="/locations/:id">
+              <LocationDetails />
+            </Route>
+            {/* will always match so is a catch-all */}
+            <Route path="*">
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
