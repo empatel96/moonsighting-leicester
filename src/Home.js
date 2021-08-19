@@ -4,7 +4,7 @@ import LocationsList from "./Components/LocationsList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const { data, isPending, error } = useFetch("./leicester moonsighting.json");
+  const { data, isPending, error } = useFetch("./leicester-moonsighting.json");
 
   return (
     <div className="home">

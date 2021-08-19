@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const LocationDetails = () => {
   const { id } = useParams();
-  const { data, isPending, error } = useFetch("../leicester moonsighting.json");
+  const { data, isPending, error } = useFetch("../leicester-moonsighting.json");
   const [location, setLocation] = useState(null);
   const [url, setUrl] = useState(null);
   if (!isPending && !location) {
