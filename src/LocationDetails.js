@@ -4,16 +4,27 @@ import React, { useState, useEffect } from "react";
 
 const LocationDetails = () => {
   const { id } = useParams();
-  const { data, isPending, error } = useFetch("../leicester-moonsighting.json");
+  const { data, isPending, error } = useFetch(
+    "http://localhost:3000/record/" + id
+  );
   const [location, setLocation] = useState(null);
+
   const [url, setUrl] = useState(null);
-  if (!isPending && !location) {
-    setLocation(data.features[id]);
-  }
+  // if (!isPending && !location) {
+  //   setLocation(data.features[id]);
+  // }
+  useEffect(() => {
+    if (data) {
+      setLocation(data[0]);
+    }
+  }, [data]);
+
   useEffect(() => {
     if (location) {
+      const longitude = location.geometry.coordinates[0];
+      const latitude = location.geometry.coordinates[1];
       setUrl(
-        `https://www.google.com/maps/search/?api=1&query=${location.geometry.coordinates[1]},${location.geometry.coordinates[0]}`
+        `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`
       );
     }
   }, [location]);
@@ -21,7 +32,7 @@ const LocationDetails = () => {
   const history = useHistory();
   const handleClick = () => {
     window.open(url, "_blank").focus();
-   };
+  };
 
   return (
     <div className="location-details">
