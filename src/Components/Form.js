@@ -26,7 +26,7 @@ const Form = () => {
     };
     setIsPending(true);
     // make post request
-    fetch("http://localhost:8443/record/add", {
+    fetch("http://35.178.169.152:8443/record/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
