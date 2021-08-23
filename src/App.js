@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Home";
+import About from "./About";
 import NotFound from "./NotFound";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LocationDetails from "./LocationDetails";
@@ -17,6 +18,9 @@ function App() {
             <Route exact path="/">
               {/* nest home component */}
               <Home />
+            </Route>
+            <Route exact path="/about">
+              <About />
             </Route>
             {/* <Route path="/create">
               <Create />

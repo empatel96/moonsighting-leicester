@@ -5,10 +5,9 @@ import useFetch from "./useFetch";
 
 const Home = () => {
   // const { data, isPending, error } = useFetch("./leicester-moonsighting.json");
-  const { data, isPending, error } = useFetch("http://localhost:3000/record/")
-  useEffect(() => {
-    console.log(data);
-  }, [data])
+  const { data, isPending, error } = useFetch("http://35.178.169.152:8443/record")
+  // useEffect(() => {
+  // }, [data])
   return (
     <div className="home">
       {isPending && <div>Loading...</div>}
