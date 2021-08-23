@@ -7,6 +7,7 @@ const Form = () => {
   const [url, setUrl] = useState("");
   const [details, setDetails] = useState("");
   const [isPending, setIsPending] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleErrors = (e) => {
     e.forEach((error) => {
@@ -36,6 +37,7 @@ const Form = () => {
         if (data.errors.length) {
           handleErrors(data.errors);
         } else {
+          setSuccess(true);
         }
         // history.go(-1); // go back one page
         // Go home
@@ -99,6 +101,7 @@ const Form = () => {
       ></textarea>
       {!isPending && <button>Submit</button>}
       {isPending && <button disabled>Submitting Form...</button>}
+      {success && <div>Submitted successfully.</div>}
     </form>
   );
 };
