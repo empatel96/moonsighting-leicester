@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 const LocationDetails = () => {
   const { id } = useParams();
   const { data, isPending, error } = useFetch(
-    "http://localhost:3000/record/" + id
+    "http://35.178.169.152:8443/record/" + id
   );
   const [location, setLocation] = useState(null);
 
@@ -40,7 +40,7 @@ const LocationDetails = () => {
       {error && <div>{error}</div>}
       {location && (
         <article>
-          <h2>{location.properties.name}</h2>
+          <h3>{location.properties.name}</h3>
           <p>Details: {location.properties.description}</p>
           <button onClick={handleClick}>View on Google Maps</button>
         </article>

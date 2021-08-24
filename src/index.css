@@ -42,7 +42,7 @@
 .location-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.location-preview h2 {
+.location-preview h3 {
   font-size: 20px;
   color: var(--blue);
   margin-bottom: 8px;
@@ -122,4 +122,9 @@ textarea {
     flex-grow: 2;
     /* max-width: 50%; */
   }
+}
+
+
+article, h2 {
+  padding: 0 16px;
 }
