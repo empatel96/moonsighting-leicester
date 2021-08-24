@@ -13,6 +13,7 @@ const Home = () => {
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {data && <LocationsList locations={data} title="All Locations" />}
+      <a href="https://www.google.com/maps/d/embed?mid=1i85CHz15y6JTwO811OLxIilkvoMTVB_b&hl=en" target="_blank">View All Locations Map</a>
     </div>
   );
 };
